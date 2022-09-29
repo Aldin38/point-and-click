@@ -1,0 +1,7 @@
+.screen-transition {
+    position: absolute;
+    background-color: $black-color;
+    min-height: 100vh;
+    min-width: 100vw;
+    animation: fade 2s forwards;
+}

@@ -1,9 +1,10 @@
 import './assets/styles/styles.scss';
+import { GameScreen } from 'components'
 
 function App() {
   return (
     <div>
-      Point and click game
+      <GameScreen />
     </div>
   );
 }
