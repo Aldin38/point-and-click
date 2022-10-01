@@ -1,0 +1,46 @@
+{
+  "zones": {
+    "office": {
+      "areas": {
+        "keypadOfficeEnterence": {
+          "image": "/images/office/keypad_enterance.jpg",
+          "interactableObjects": {
+            "keypad": {
+              "image": "/images/office/objects/office_keypad.jpg",
+              "requires": ["keycode"]
+            }
+          },
+          "connected": {
+            "left": null,
+            "back": null,
+            "right": null,
+            "front": "officeEnterance"
+          }
+        },
+        "officeEnterance": {
+          "image": "/images/office/office_enterance.jpg",
+          "connected": {
+            "left": null,
+            "back": "keypadOfficeEnterence",
+            "right": null,
+            "front": null
+          }
+        },
+        "mainOffice": {
+          "image": "/images/office/main_office.jpg",
+          "interactableObjects": {
+            "myDesk": {
+              "image": "/images/office/objects/my_desk.jpg"
+            }
+          },
+          "connected": {
+            "left": null,
+            "back": null,
+            "right": null,
+            "front": null
+          }
+        }
+      }
+    }
+  }
+}
