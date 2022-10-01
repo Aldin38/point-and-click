@@ -14,6 +14,7 @@
         "assets/*": ["assets/*"],
         "data/*": ["data/*"],
         "contexts/*": ["contexts/*"],
+        "hooks/*": ["hooks/*"]
     },
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "allowJs": true,

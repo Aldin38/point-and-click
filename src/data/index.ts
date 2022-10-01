@@ -1,5 +1,4 @@
-import GameData from './data.json';
+import data from './data.json';
 
-
-
-// export GameData; 
+// Get saved data saved in localStorage in here 
+export const GameData  = data;
