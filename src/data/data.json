@@ -1,6 +1,7 @@
 {
   "zones": {
     "office": {
+      "startingArea": "keypadOfficeEnterence",
       "areas": {
         "keypadOfficeEnterence": {
           "image": "/images/office/keypad_enterance.jpg",
@@ -20,10 +21,10 @@
         "officeEnterance": {
           "image": "/images/office/office_enterance.jpg",
           "connected": {
-            "left": null,
+            "left": "backOffice",
             "back": "keypadOfficeEnterence",
-            "right": null,
-            "front": null
+            "right": "toilet",
+            "front": "mainOffice"
           }
         },
         "mainOffice": {
@@ -35,9 +36,27 @@
           },
           "connected": {
             "left": null,
-            "back": null,
+            "back": "backOffice",
+            "right": "officeEnterance",
+            "front": null
+          }
+        },
+        "toilet": {
+          "image": "/images/office/toilet.jpg",
+          "connected": {
+            "left": null,
+            "back": "officeEnterance",
             "right": null,
             "front": null
+          }
+        },
+        "backOffice": {
+          "image": "/images/office/back_office.jpg",
+          "connected": {
+            "left": null,
+            "back": "officeEnterance",
+            "right": null,
+            "front": "mainOffice"
           }
         }
       }

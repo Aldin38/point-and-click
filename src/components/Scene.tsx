@@ -1,13 +1,19 @@
 import { FC } from 'react';
+import { useGameTraversal } from 'hooks';
 
-interface SceneProps {
-    image: string
-}
+export const Scene: FC = () => {
+    const { currentArea, avaliablePaths, loadNewArea } = useGameTraversal();
+    const { image: AreaImage } = currentArea();
+    const { front, back, left, right } = avaliablePaths()
 
-export const Scene: FC<SceneProps> = ({ image }) => {
     return (
         <div className='scene'>
-            <img className="scene__image" src={image} alt="current scene" />
+            <img className="scene__image" src={AreaImage} alt="current scene" />
+
+            { front && <button className='scene__load-area-btn' onClick={() => loadNewArea(front)}> GO FORWARD MF</button> }
+            { back && <button className='scene__load-area-btn' onClick={() => loadNewArea(back)}> GO BACK MF</button> }
+            { left && <button className='scene__load-area-btn' onClick={() => loadNewArea(left)}> GO LEFT MF</button> }
+            { right && <button className='scene__load-area-btn' onClick={() => loadNewArea(right)}> GO RIGHT MF</button> }
         </div>
     );
 }
