@@ -18,7 +18,7 @@ const gameZones: GameZones = GameData.zones
 
 
 export const useGameTraversal = () => {
-    const [zone, setZone] = useState(savedGameData);
+    const [zone] = useState(savedGameData);
     const [area, setArea] = useState(gameZones[savedGameData as keyof GameZones]?.startingArea);
     
     const { resetTransition } = useContext(TransitionContext);
