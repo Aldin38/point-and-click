@@ -2,6 +2,7 @@
   "zones": {
     "office": {
       "startingArea": "keypadOfficeEnterence",
+      "exit": "apartmantNight",
       "areas": {
         "keypadOfficeEnterence": {
           "image": "/images/office/keypad_enterance.jpg",
@@ -57,6 +58,75 @@
             "back": "officeEnterance",
             "right": null,
             "front": "mainOffice"
+          }
+        }
+      }
+    },
+    "apartmantNight": {
+      "startingArea": "enterance",
+      "exit": "office",
+      "areas": {
+        "enterance": {
+          "image": "/images/apartmant-night/enterance.jpg",
+          "connected": {
+            "left": "toilet",
+            "back": null,
+            "right": "hall",
+            "front": "bedroom"
+          }
+        },
+        "toilet": {
+          "image": "/images/apartmant-night/toilet.jpg",
+          "connected": {
+            "left": null,
+            "back": "enterance",
+            "right": null,
+            "front": null
+          }
+        },
+        "bedroom": {
+          "image": "/images/apartmant-night/bedroom.jpg",
+          "connected": {
+            "left": null,
+            "back": "enterance",
+            "right": null,
+            "front": null
+          }
+        },
+        "hall": {
+          "image": "/images/apartmant-night/hall.jpg",
+          "connected": {
+            "left": "livingRoom",
+            "back": "enterance",
+            "right": null,
+            "front": "kitchen"
+          }
+        },
+        "kitchen": {
+          "image": "/images/apartmant-night/kitchen.jpg",
+          "connected": {
+            "left": null,
+            "back": "hall",
+            "right": null,
+            "front": "balcony"
+          }
+        },
+        "balcony": {
+          "image": "/images/apartmant-night/balcony.jpg",
+          "connected": {
+            "left": null,
+            "back": "livingRoom",
+            "right": "kitchen",
+            "front": null
+          }
+        },
+        "livingRoom": {
+          "image": "/images/apartmant-night/living_room.jpg",
+          "connected": {
+            "left": null,
+            "back": "hall",
+            "right": null,
+            "front": "balcony"
           }
         }
       }

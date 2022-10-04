@@ -10,6 +10,5 @@ if (!savedData) {
     savedData = localStorage.getItem('savedData') 
 }
 
-console.log(savedData, localStorage.getItem('savedData') , 'ls')
 export const savedGameData = savedData as string;
 export const GameData = data;
